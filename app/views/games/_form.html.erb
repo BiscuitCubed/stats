@@ -1,0 +1,62 @@
+<%= form_for [@player, @game], local: true do |form| %>
+  <% if game.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(game.errors.count, "error") %> prohibited this game from being saved:</h2>
+
+      <ul>
+      <% game.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :player_id %>
+    <%= form.number_field :player_id, id: :player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :at_bat %>
+    <%= form.number_field :at_bat, id: :game_at_bat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :run %>
+    <%= form.number_field :run, id: :game_run %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hit %>
+    <%= form.number_field :hit, id: :game_hit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :walk %>
+    <%= form.number_field :walk, id: :game_walk %>
+  </div>
+
+  <div class="field">
+    <%= form.label :run_batted_in %>
+    <%= form.number_field :run_batted_in, id: :game_run_batted_in %>
+  </div>
+
+  <div class="field">
+    <%= form.label :home_run %>
+    <%= form.number_field :home_run, id: :game_home_run %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stolen_base %>
+    <%= form.number_field :stolen_base, id: :game_stolen_base %>
+  </div>
+
+  <div class="field">
+    <%= form.label :strike_out %>
+    <%= form.number_field :strike_out, id: :game_strike_out %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

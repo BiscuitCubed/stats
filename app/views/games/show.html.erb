@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>At bat:</strong>
+  <%= @game.at_bat %>
+</p>
+
+<p>
+  <strong>Run:</strong>
+  <%= @game.run %>
+</p>
+
+<p>
+  <strong>Hit:</strong>
+  <%= @game.hit %>
+</p>
+
+<p>
+  <strong>Walk:</strong>
+  <%= @game.walk %>
+</p>
+
+<p>
+  <strong>Run batted in:</strong>
+  <%= @game.run_batted_in %>
+</p>
+
+<p>
+  <strong>Home run:</strong>
+  <%= @game.home_run %>
+</p>
+
+<p>
+  <strong>Stolen base:</strong>
+  <%= @game.stolen_base %>
+</p>
+
+<p>
+  <strong>Strike out:</strong>
+  <%= @game.strike_out %>
+</p>
+
+<%= link_to 'Edit', edit_player_game_path(@player, @game) %> |
+<%= link_to 'Back', player_game_path(@player, @game) %>
