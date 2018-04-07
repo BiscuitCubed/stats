@@ -37,6 +37,31 @@
   </div>
 
   <div class="field">
+    <%= form.label :fielders_choice %>
+    <%= form.number_field :fielders_choice, id: :game_fielders_choice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reacehd_on_error %>
+    <%= form.number_field :reacehd_on_error, id: :game_reached_on_error %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sacrifice_hit %>
+    <%= form.number_field :sacrifice_hit, id: :game_sacrifice_hit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hit_by_pitch %>
+    <%= form.number_field :hit_by_pitch, id: :game_hit_by_pitch %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reached_on_some_other_reason %>
+    <%= form.number_field :reached_on_some_other_reason, id: :game_reached_on_some_other_reason %>
+  </div>
+
+  <div class="field">
     <%= form.label :run_batted_in %>
     <%= form.number_field :run_batted_in, id: :game_run_batted_in %>
   </div>
