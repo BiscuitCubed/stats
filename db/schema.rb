@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20180328022420) do
     t.integer "reacehd_on_error"
     t.integer "sacrifice_hit"
     t.integer "hit_by_pitch"
-    t.integer "reached_on_defensive_interferance"
+    t.integer "reached_on_defensive_interference"
     t.integer "reached_on_some_other_reason"
     t.integer "run_batted_in"
     t.integer "home_run"
