@@ -74,6 +74,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.require(:game).permit(:at_bat, :run, :hit, :walk, :run_batted_in, :home_run, :stolen_base, :strike_out, :player_id)
+      params.require(:game).permit(:at_bat, :run, :hit, :walk, :fielders_choice, :reacehd_on_error, :hit_by_pitch, :reached_on_defensive_interference, :sacrifice_hit, :reached_on_some_other_reason, :run_batted_in, :home_run, :stolen_base, :strike_out, :player_id, :put_out)
     end
 end

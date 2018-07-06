@@ -42,13 +42,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :reacehd_on_error %>
-    <%= form.number_field :reacehd_on_error, id: :game_reached_on_error %>
+    <%= form.label :reached_on_error %>
+    <%= form.number_field :reached_on_error, id: :game_reached_on_error %>
   </div>
 
   <div class="field">
     <%= form.label :sacrifice_hit %>
     <%= form.number_field :sacrifice_hit, id: :game_sacrifice_hit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sacrifice_fly %>
+    <%= form.number_field :sacrifice_fly, id: :game_sacrifice_fly %>
   </div>
 
   <div class="field">
@@ -84,6 +89,11 @@
   <div class="field">
     <%= form.label :strike_out %>
     <%= form.number_field :strike_out, id: :game_strike_out %>
+  </div>
+
+  <div class="field">
+    <%= form.label :put_out %>
+    <%= form.number_field :put_out, id: :game_put_out %>
   </div>
 
   <div class="actions">

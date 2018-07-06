@@ -9,10 +9,17 @@
       <th>Run</th>
       <th>Hit</th>
       <th>Walk</th>
+      <th>fielders choice</th>
+      <th>reached on error</th>
+      <th>sacrifice hit</th>
+      <th>hit by pitch</th>
+      <th>reached on defensive_interference</th>
+      <th>reached on some other reason</th>
       <th>Run batted in</th>
       <th>Home run</th>
       <th>Stolen base</th>
       <th>Strike out</th>
+      <th>put out</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,14 +27,21 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= game.at_bat %></td>
+        <td><%= game.at_bats() %></td>
         <td><%= game.run %></td>
         <td><%= game.hit %></td>
         <td><%= game.walk %></td>
+        <td><%= game.fielders_choice %></td>
+        <td><%= game.reached_on_error %></td>
+        <td><%= game.sacrifice_hit %></td>
+        <td><%= game.hit_by_pitch %></td>
+        <td><%= game.reached_on_defensive_interference %></td>
+        <td><%= game.reached_on_some_other_reason %></td>
         <td><%= game.run_batted_in %></td>
         <td><%= game.home_run %></td>
         <td><%= game.stolen_base %></td>
         <td><%= game.strike_out %></td>
+        <td><%= game.put_out %></td>
         <td><%= link_to 'Show', player_game_path(@player, game) %></td>
         <td><%= link_to 'Edit', edit_player_game_path(@player, game) %></td>
         <td><%= link_to 'Destroy', player_game_path(@player, game), method: :delete, data: { confirm: 'Are you sure?' } %></td>
